@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/miCuenta"
+        android:title="@string/miCuenta">
+        <menu>
+            <item
+                android:id="@+id/datosPersonales"
+                android:title="@string/datosPersonales" />
+            <item
+                android:id="@+id/documentosViaje"
+                android:title="@string/documentos_viaje" />
+            <item
+                android:id="@+id/compañerosViaje"
+                android:title="@string/compañeros_viaje" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/viajes"
+        android:title="@string/viajes" />
+    <item
+        android:id="@+id/tarjetasEmbarque"
+        android:title="@string/tarjetas_embarque" />
+    <item
+        android:id="@+id/informacionVuelo"
+        android:title="@string/informacion_vuelo" />
+    <item
+        android:id="@+id/infoActualizada"
+        android:title="@string/info_actualizada" />
+    <item
+        android:id="@+id/valesRegalo"
+        android:title="@string/vales_regalo" />
+    <item
+        android:id="@+id/terminosCondiciones"
+        android:title="@string/terminos_condiciones" />
+    <item
+        android:id="@+id/centroAyuda"
+        android:title="@string/centro_ayuda" />
+    <item
+        android:id="@+id/contactarAerolinea"
+        android:title="@string/contactar_aerolinea" />
+    <item
+        android:id="@+id/politicaPrivacidad"
+        android:title="@string/politica_privacidad" />
+    <item
+        android:id="@+id/configuracionPrivacidad"
+        android:title="@string/configuracion_privacidad" />
+</menu>

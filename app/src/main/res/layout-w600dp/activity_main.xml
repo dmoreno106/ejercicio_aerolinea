@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/ivNigeria"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivNigeria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/iv_nigeria"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/nigeriaairlines" />
+
+            <EditText
+                android:id="@+id/etOrigen"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape"
+                android:ems="10"
+                android:fontFamily="@font/notoserif"
+                android:hint="@string/et_origen"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/etDestino"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivNigeria"
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/etDestino"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/shape"
+                android:ems="10"
+                android:fontFamily="@font/notoserif"
+                android:hint="@string/et_destino"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/etOrigen"
+                app:layout_constraintTop_toTopOf="@+id/etOrigen"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/spinnerTratamiento"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:entries="@array/tratamiento"
+                app:layout_constraintEnd_toStartOf="@+id/etName"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etOrigen" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/shape"
+                android:ems="10"
+                android:fontFamily="@font/notoserif"
+                android:hint="@string/et_email"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/etApellidos"
+                app:layout_constraintTop_toTopOf="@+id/etApellidos"
+                tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/shape"
+                android:ems="10"
+                android:fontFamily="@font/notoserif"
+                android:hint="@string/et_name"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintStart_toEndOf="@+id/spinnerTratamiento"
+                app:layout_constraintTop_toTopOf="@+id/spinnerTratamiento"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/etApellidos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape"
+                android:ems="10"
+                android:fontFamily="@font/notoserif"
+                android:hint="@string/et_apellidos"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/etEmail"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerTratamiento"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/etTelefono"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/shape"
+                android:ems="10"
+                android:fontFamily="@font/notoserif"
+                android:hint="@string/et_telefono"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="phone"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/etDireccion"
+                app:layout_constraintTop_toTopOf="@+id/etDireccion"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/etDireccion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape"
+                android:ems="10"
+                android:fontFamily="@font/notoserif"
+                android:hint="@string/et_direction"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/etTelefono"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etApellidos"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/tvExtras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nssc"
+                android:includeFontPadding="false"
+                android:text="@string/tv_extras"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/swMovilidad"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/cbVentana"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/notoserif"
+                android:includeFontPadding="false"
+                android:minHeight="48dp"
+                android:text="@string/cb_ventana"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbPrimeraClase" />
+
+            <CheckBox
+                android:id="@+id/cbPrimeraClase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/notoserif"
+                android:includeFontPadding="false"
+                android:minHeight="48dp"
+                android:text="@string/cb_primera_clase"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvExtras" />
+
+            <CheckBox
+                android:id="@+id/cbMascota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/notoserif"
+                android:includeFontPadding="false"
+                android:minHeight="48dp"
+                android:text="@string/cb_mascota"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbVentana" />
+
+            <TextView
+                android:id="@+id/tvSeguro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/nssc"
+                android:includeFontPadding="false"
+                android:text="@string/tv_seguro"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbMascota" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSeguro">
+
+                <RadioButton
+                    android:id="@+id/rbSi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nssc"
+                    android:includeFontPadding="false"
+                    android:text="@string/rb_si" />
+
+                <RadioButton
+                    android:id="@+id/rbNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nssc"
+                    android:includeFontPadding="false"
+                    android:text="@string/rb_no" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/nssc"
+                android:includeFontPadding="false"
+                android:text="@string/tv_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <Button
+                android:id="@+id/btComprar"
+                android:layout_width="0dp"
+                android:layout_height="108dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/nssc"
+                android:includeFontPadding="false"
+                android:text="@string/bt_comprar"
+                android:textColor="#455A64"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPremium"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <Switch
+                android:id="@+id/swMovilidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/notoserif"
+                android:includeFontPadding="false"
+                android:minHeight="48dp"
+                android:text="@string/sw_movilidad"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFechaSalida"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <ImageButton
+                android:id="@+id/ibPremium"
+                android:layout_width="376dp"
+                android:layout_height="108dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/green"
+                android:contentDescription="@string/bt_comprar"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/tvPremium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+                app:srcCompat="@drawable/premium"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/tvPremium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/nssc"
+                android:includeFontPadding="false"
+                android:text="@string/tv_premium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ibPremium" />
+
+            <ImageButton
+                android:id="@+id/ibFechaRegreso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/fecha"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvFechaRegreso"
+                app:layout_constraintTop_toBottomOf="@+id/etTelefono"
+                app:srcCompat="@drawable/ic_baseline_date_range_24"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/ibFechaSalida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/fecha"
+                app:layout_constraintEnd_toStartOf="@+id/tvFechaRegreso"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/tvFechaSalida"
+                app:layout_constraintTop_toBottomOf="@+id/etDireccion"
+                app:srcCompat="@drawable/ic_baseline_date_range_24"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/tvFechaSalida"
+                android:layout_width="93dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/nssc"
+                android:includeFontPadding="false"
+                android:text="@string/tv_fecha_salida"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/ibFechaSalida"
+                app:layout_constraintHorizontal_bias="0.727"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etDireccion" />
+
+            <TextView
+                android:id="@+id/tvFechaRegreso"
+                android:layout_width="93dp"
+                android:layout_height="44dp"
+
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nssc"
+                android:includeFontPadding="false"
+                android:text="@string/fecha_regreso"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/ibFechaRegreso"
+                app:layout_constraintStart_toEndOf="@+id/ibFechaSalida"
+                app:layout_constraintTop_toBottomOf="@+id/etTelefono" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
