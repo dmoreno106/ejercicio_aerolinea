@@ -49,4 +49,9 @@
     <string name="vale1">Vale Regalo por un viaje a Nigeria para conocer nuestros origenes</string>
     <string name="vale2">Vale para un masage en primera clase dado por un quiropráctico experto (CANJEADO)</string>
     <string name="vale3">Vale por un 25% de descuento en el proximo viaje</string>
+    <string name="necesita_cuenta">Necesita una cuenta para configurar su privacidad</string>
+    <string name="amigos">Aun no tiene Amigos Añadidos</string>
+    <string name="sin_viajes">Aun no ha realizado Viajes</string>
+    <string name="crea_cuenta">Crea una cuenta  para poder acceder a los datos personales</string>
+    <string name="politicaPrivacidad">Nuestra política de privacidad no se encuentra disponible en estos momentos</string>
 </resources>

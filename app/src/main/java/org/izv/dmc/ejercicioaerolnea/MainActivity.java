@@ -1,6 +1,7 @@
 package org.izv.dmc.ejercicioaerolnea;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -22,7 +23,9 @@ import com.google.android.material.snackbar.Snackbar;
 
 import org.izv.dmc.ejercicioaerolnea.menu.AmigosDoc;
 import org.izv.dmc.ejercicioaerolnea.menu.ConfiguracionPrivacidad;
+import org.izv.dmc.ejercicioaerolnea.menu.DatosPersonales;
 import org.izv.dmc.ejercicioaerolnea.menu.MisViajes;
+import org.izv.dmc.ejercicioaerolnea.menu.PoliticaPrivacidad;
 import org.izv.dmc.ejercicioaerolnea.menu.ValesRegalo;
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
@@ -170,6 +173,28 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
+        if (id == R.id.datosPersonales) {
+            Intent intent=new Intent(this, DatosPersonales.class);
+            this.startActivity(intent);
+
+            return true;
+        }
+        if (id == R.id.informacionVuelo) {
+            String url="https://instagram.com";
+            Uri uri=Uri.parse(url);
+            Intent i=new Intent(Intent.ACTION_VIEW,uri);
+            startActivity(i);
+
+            return true;
+        }
+        if (id == R.id.infoActualizada) {
+            String url="https://RyanAir.com";
+            Uri uri=Uri.parse(url);
+            Intent i=new Intent(Intent.ACTION_VIEW,uri);
+            startActivity(i);
+
+            return true;
+        }
         if (id == R.id.viajes) {
             Intent intent=new Intent(this, MisViajes.class);
             this.startActivity(intent);
@@ -188,21 +213,33 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             Intent intent=new Intent(this, ConfiguracionPrivacidad.class);
             this.startActivity(intent);
         }
-        if(id==R.id.compañerosViaje){
-            Intent intent=new Intent(this, AmigosDoc.class);
+        if(id==R.id.contactarAerolinea){
+            String url="https://www.ryanair.com/es/es/header/useful-links";
+            Uri uri=Uri.parse(url);
+            Intent i=new Intent(Intent.ACTION_VIEW,uri);
+            startActivity(i);
+        }
+        if(id==R.id.tarjetasEmbarque){
+            String url="https://www.apple.com/es/clips/";
+            Uri uri=Uri.parse(url);
+            Intent i=new Intent(Intent.ACTION_VIEW,uri);
+            startActivity(i);
+        }
+        if(id==R.id.politicaPrivacidad){
+            Intent intent=new Intent(this, PoliticaPrivacidad.class);
             this.startActivity(intent);
         }
-        if(id==R.id.compañerosViaje){
-            Intent intent=new Intent(this, AmigosDoc.class);
-            this.startActivity(intent);
+        if(id==R.id.centroAyuda){
+            String url="https://help.netflix.com/es-es";
+            Uri uri=Uri.parse(url);
+            Intent i=new Intent(Intent.ACTION_VIEW,uri);
+            startActivity(i);
         }
-        if(id==R.id.compañerosViaje){
-            Intent intent=new Intent(this, AmigosDoc.class);
-            this.startActivity(intent);
-        }
-        if(id==R.id.compañerosViaje){
-            Intent intent=new Intent(this, AmigosDoc.class);
-            this.startActivity(intent);
+        if(id==R.id.documentosViaje){
+            String url="https://www.samsung.com/es/apps/bixby/";
+            Uri uri=Uri.parse(url);
+            Intent i=new Intent(Intent.ACTION_VIEW,uri);
+            startActivity(i);
         }
 
         return super.onOptionsItemSelected(item);
